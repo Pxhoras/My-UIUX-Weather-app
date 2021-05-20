@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9d8f42088a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card" style="max-width: 700px;">
+        <div class="card-body whole">
+          <br  />
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="search btn btn-primary w-80"
+                />
+              </div>
+            </div>
+          </form>
+          <h1 class="city" id="place-weather"></h1>
+          <h4 id="date-information"></h4>
+          <div class="row">
+            <div class="col">
+              <div class="card bottom">
+                <div class="card-body">
+          <h2 class="temperature" id="temperature-change"></h2>
+          <a href="#"><span class="conversions" id="celsius-link">C° |</a></span>
+          <a href="#"><span class="centigrades" id="fahrenheit-link">F° </a></span>
+          <img src=""  alt="Weather icon" id="icon" class="fas float-left"></i>
+          <h3 class="label-big-icon" id="description"></h3>
+          <div class="row">
+            <ul>
+                <li>Humidity: <span class="col data"id="humidity"></span>%</li>
+                <li>Wind: <span class="col data"id="wind"></span> km/h</li>
+            </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="col">
+            <div class="card bottom">
+              <div class="card-body">
+                <img src="images/sprint.svg" alt="Image of happy gilr in Spring weather" class="spring">
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thu</div>
+              <i class="fas fa-cloud prevision" alt="icon for rainy weather with cloud and rain" ></i>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">XX°</span>
+                <span class="weather-forecast-temperature-min">XX°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="opensource"><a href="https://github.com/Pxhoras/My-UIUX-Weather-app.git" target="_blank">Opensource code</a><div class="open"> by Soledad😁</div></h2>
+      <script src="script.js"></script>
+    </div>
+    
+  </div>
+
+
+  </body>
+</html>
