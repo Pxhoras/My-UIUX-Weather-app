@@ -15,7 +15,7 @@ h2 {
 }
 
 h4 {
-  color: aquamarine;
+  color: #f3bc07;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   text-align: center;
@@ -33,6 +33,10 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200;
   line-height: -5;
+}
+
+.humidity-wind {
+  color: #f3bc07;
 }
 
 .container {
@@ -54,13 +58,6 @@ p {
   color: rgb(60, 101, 233);
   text-align: center;
   font-size: 14px;
-}
-
-.open {
-  font-family: "Courier New", Courier, monospace;
-  color: rgb(60, 101, 233);
-  font-size: 14px;
-  display: inline;
 }
 
 .btn-success {
@@ -86,11 +83,11 @@ p {
   font-weight: 200;
   text-align: center;
   text-transform: capitalize;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .card-body {
-  background: rgb(12, 3, 66);
+  background: transparent;
   display: block;
   margin: 0 auto;
   padding: 20px;
@@ -101,20 +98,21 @@ p {
 }
 
 .card {
+  background: transparent;
   top: 30px;
   display: block;
   margin: 0 auto;
 }
 
 .whole {
-  background: rgb(12, 3, 66);
-  border: 1px solid aqua;
+  background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
+  border: 1px solid #f3bc07;
   border-radius: 15px;
   padding: 15px;
 }
 
 .conversions {
-  color: aquamarine;
+  color: #f3bc07;
   cursor: default;
   position: absolute;
   right: 70px;
@@ -126,7 +124,7 @@ p {
 }
 
 .centigrades {
-  color: aquamarine;
+  color: #f3bc07;
   position: absolute;
   right: 55px;
   top: 90px;
@@ -221,11 +219,13 @@ p {
   border-radius: 20px;
 }
 .search {
-  background: rgb(60, 101, 233);
+  background: #f3bc07;
+  border: rgb(1, 13, 82);
   border-radius: 20px;
-  color: white;
+  color: rgb(1, 13, 82);
 }
 
 .search:hover {
   background: rgb(1, 13, 82);
+  color: #f3bc07;
 }
