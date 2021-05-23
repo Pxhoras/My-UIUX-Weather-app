@@ -40,7 +40,8 @@ p {
 }
 
 .container {
-  height: 1100px;
+  max-width: 700px;
+  height: 1060px;
 }
 
 .paragraph {
@@ -105,7 +106,7 @@ p {
 }
 
 .whole {
-  background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(to top, #29323c 0%, #828a92 100%);
   border-bottom: 1px solid white;
   padding: 15px;
 }
@@ -151,10 +152,11 @@ p {
 }
 
 .weather-forecast-date {
-  color: white;
+  color: #29323c;
   font-size: 18px;
   font-weight: 900;
-  padding: 10px;
+  padding: 5px;
+  padding-top: 20px;
 }
 
 .weather-forecast-temperatures {
@@ -167,7 +169,7 @@ p {
 }
 
 .weather-forecast {
-  background: #29323c;
+  background: #82888f;
 }
 
 .row {

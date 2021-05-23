@@ -17,6 +17,27 @@ let dayMonth =date.getDate();
 return `Last update, ${day} ${month} ${dayMonth} at ${hours}:${minutes}</p>`;
 }
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML=`<div class="row">`;
+  let weekDays =["Sat", "Sun", "Mon", "Tue", "Wed"];
+  weekDays.forEach(function(day){
+      forecastHTML = forecastHTML +
+   ` <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img src="http://openweathermap.org/img/wn/50d@2x.png" class="fas fa-cloud prevision" alt="" width="42"/>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">18°</span>
+                <span class="weather-forecast-temperature-min">10°</span>
+              </div>
+            </div>
+            `;
+  });
+
+  forecastHTML= forecastHTML + `</div>`;
+  forecastElement.innerHTML=forecastHTML;
+}
+
 function displayTemperature (response) {
   let temperatureElement=document.querySelector("#temperature-change");
   let cityElement=document.querySelector("#place-weather");
@@ -25,6 +46,7 @@ function displayTemperature (response) {
   let windElement=document.querySelector("#wind");
   let dateElement=document.querySelector("#date-information");
   let iconElement=document.querySelector("#icon");
+
 
   celsiusTemperature=response.data.main.temp;
 
@@ -68,7 +90,7 @@ function displayCelsiusTemp(event){
 }
 
 let celsiusTemperature =null;
-
+displayForecast();
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -80,6 +102,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Madrid");
 
-//id="#celsius-link"
-//id="fahrenheit-link"
-//id="#temperature-change"
+//id="#weather-forecast-temperatures"
+//id="#
+//id="#
