@@ -106,8 +106,7 @@ p {
 
 .whole {
   background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
-  border: 1px solid #f3bc07;
-  border-radius: 15px;
+  border-bottom: 1px solid white;
   padding: 15px;
 }
 
@@ -152,18 +151,23 @@ p {
 }
 
 .weather-forecast-date {
-  color: rgb(19, 19, 129);
+  color: white;
   font-size: 18px;
   font-weight: 900;
   padding: 10px;
 }
 
 .weather-forecast-temperatures {
+  color: white;
   padding-bottom: 30px;
 }
 
 .weather-forecast-temperature-min {
   opacity: 60%;
+}
+
+.weather-forecast {
+  background: #29323c;
 }
 
 .row {
