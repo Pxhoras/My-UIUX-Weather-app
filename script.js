@@ -52,7 +52,7 @@ function displayForecast(response){
 
 function getForecast(coordinates) {
 let apiKey = "6ec780629b6faed9d539966bf949a6fb";
-let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
  axios.get(apiUrl).then(displayForecast);
 }
 
@@ -80,7 +80,7 @@ function displayTemperature (response) {
 
 function search(city){
   let apiKey = "6ec780629b6faed9d539966bf949a6fb";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -93,9 +93,9 @@ function handleSubmit(event){
 function displayFahrenheitTemp(event){
   event.preventDefault();
   let temperatureElement=document.querySelector("#temperature-change");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) /5 + 32;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let fahrenheiTemperature = (celsiusTemperature -32) * 5/9;
   temperatureElement.innerHTML =Math.round(fahrenheiTemperature);
 }
 

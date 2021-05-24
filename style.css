@@ -114,6 +114,7 @@ p {
 .conversions {
   color: #f3bc07;
   cursor: default;
+  font-weight: 900;
   position: absolute;
   right: 70px;
   top: 90px;
