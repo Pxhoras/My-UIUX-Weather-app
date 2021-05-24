@@ -163,6 +163,10 @@ p {
   color: white;
   padding-bottom: 30px;
 }
+.col-2 {
+  display: block;
+  margin: 0 auto;
+}
 
 .weather-forecast-temperature-min {
   opacity: 60%;
