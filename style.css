@@ -137,7 +137,6 @@ p {
 }
 
 .fas {
-  color: aquamarine;
   display: block;
   font-size: 80px;
   margin: 0 auto;
@@ -171,6 +170,10 @@ p {
 
 .weather-forecast-temperature-min {
   opacity: 60%;
+}
+
+.bord {
+  border: 1px dotted white;
 }
 
 .weather-forecast {
