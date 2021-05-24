@@ -17,7 +17,8 @@ let dayMonth =date.getDate();
 return `Last update, ${day} ${month} ${dayMonth} at ${hours}:${minutes}</p>`;
 }
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML=`<div class="row">`;
   let weekDays =["Sat", "Sun", "Mon", "Tue", "Wed"];
@@ -38,6 +39,12 @@ function displayForecast(){
   forecastElement.innerHTML=forecastHTML;
 }
 
+function getForecast(coordinates) {
+let apiKey = "6ec780629b6faed9d539966bf949a6fb";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+ axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature (response) {
   let temperatureElement=document.querySelector("#temperature-change");
   let cityElement=document.querySelector("#place-weather");
@@ -46,8 +53,6 @@ function displayTemperature (response) {
   let windElement=document.querySelector("#wind");
   let dateElement=document.querySelector("#date-information");
   let iconElement=document.querySelector("#icon");
-
-
   celsiusTemperature=response.data.main.temp;
 
   temperatureElement.innerHTML=Math.round(response.data.main.temp);
@@ -57,7 +62,9 @@ function displayTemperature (response) {
   windElement.innerHTML=Math.round(response.data.wind.speed);
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].icon);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(city){
@@ -90,7 +97,6 @@ function displayCelsiusTemp(event){
 }
 
 let celsiusTemperature =null;
-displayForecast();
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -104,4 +110,4 @@ search("Madrid");
 
 //id="#weather-forecast-temperatures"
 //id="#
-//id="#
+//id="# https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
