@@ -138,10 +138,17 @@ p {
 
 .fas {
   display: block;
-  font-size: 80px;
+  width: 120px;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
+}
+
+.fasfu {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: auto;
 }
 
 .prevision {
@@ -242,4 +249,8 @@ p {
 .search:hover {
   background: rgb(1, 13, 82);
   color: #f3bc07;
+}
+
+.spacing {
+  padding-bottom: 20px;
 }
